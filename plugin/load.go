@@ -16,8 +16,6 @@ type Plugin struct {
 }
 
 func LoadPlugins(path string) ([]Plugin, error) {
-	fmt.Printf("loading plugin bundle: %v\n", path)
-
 	p, err := goplugin.Open(path)
 	if err != nil {
 		return nil, err
