@@ -3,8 +3,8 @@ package executor
 import (
 	"fmt"
 
-	"github.com/shima-park/lotus/pkg/component"
-	"github.com/shima-park/lotus/pkg/processor"
+	"github.com/shima-park/seed/component"
+	"github.com/shima-park/seed/processor"
 )
 
 type Executor interface {
