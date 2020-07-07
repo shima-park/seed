@@ -2,7 +2,6 @@ package plugin
 
 import (
 	"errors"
-	"fmt"
 	goplugin "plugin"
 	"time"
 )
