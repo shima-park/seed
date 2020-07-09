@@ -2,20 +2,12 @@ package executor
 
 import (
 	"fmt"
-
-	"github.com/shima-park/seed/component"
-	"github.com/shima-park/seed/processor"
 )
 
 type Executor interface {
-	Name() string
-	Config() string
 	Start() error
 	Stop()
 	State() State
-	ListComponents() []Component
-	ListProcessors() []Processor
-	Error() error
 }
 
 var (
@@ -36,18 +28,4 @@ func (s State) String() string {
 		return "exited"
 	}
 	return fmt.Sprintf("unknown(%d)", s)
-}
-
-type Component struct {
-	Name      string
-	RawConfig string
-	Component component.Component
-	Factory   component.Factory
-}
-
-type Processor struct {
-	Name      string
-	RawConfig string
-	Processor processor.Processor
-	Factory   processor.Factory
 }
